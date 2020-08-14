@@ -2,7 +2,7 @@
 
 This script is used for scraping the product details from the amazon website and store in the JSON file.
 
-I store the retrieved data in JSON file with the unique filename in format "data"+product_name
+I retrieved data from all webpages related that product and stored in JSON file with the unique filename in format "data"+product_name
 
 Some of the issues while scraping product details from amazon. Since Amazon is smart it raises an error when accessing the data 
 from a third party.
