@@ -16,8 +16,10 @@ def get_data(next_page):
             all_price=soup.find_all("span",{"class":"a-price-whole"})
             all_stars=soup.find_all("span",{"class":"a-icon-alt"})
             all_img=soup.find_all("div",{"class":"a-section aok-relative s-image-fixed-height"})
+
             for a,b,c,d in zip(all_title,all_price,all_stars,all_img):
                 all_product_details.append({'title':a.get_text(),'price':b.get_text(),'stars':c.get_text(),'img':d.find('img')["src"]})
+            
             next_page=soup.find("li",{"class":"a-last"})
             if next_page is not None :
                 next_page=next_page.find('a')
